@@ -4,14 +4,17 @@ const fs = require('fs');
 
 const path = './package.json';
 try {
+
+  const testString = 'does not';
   // `who-to-greet` input defined in action metadata file
   // const nameToGreet = core.getInput('who-to-greet');
   // console.log(`Hello ${nameToGreet}!`);
   if(fs.existsSync(path)){
     console.log(`exits`);
+    testString = 'exists';
   }
   // const time = (new Date()).toTimeString();
-  core.setOutput("time", "finished");
+  core.setOutput("time", testString);
   // Get the JSON webhook payload for the event that triggered the workflow
   // const payload = JSON.stringify(github.context.payload, undefined, 2)
   // console.log(`The event payload: ${payload}`);
