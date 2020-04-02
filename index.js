@@ -8,7 +8,7 @@ try {
   // const nameToGreet = core.getInput('who-to-greet');
   // console.log(`Hello ${nameToGreet}!`);
   if(fs.existsSync(path)){
-    onsole.log(`exits`);
+    console.log(`exits`);
   }
   // const time = (new Date()).toTimeString();
   core.setOutput("time", "finished");
