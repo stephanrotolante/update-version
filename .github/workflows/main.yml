@@ -6,7 +6,7 @@ jobs:
     name: A job to say hello
     steps:
     - name: See file structure
-      run: ls
+      run: pwd
     - name: Hello world action step
       id: hello
       uses: stephanrotolante/update-version@master
