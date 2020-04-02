@@ -7,7 +7,7 @@ try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
   if (fs.existsSync(path)){
-      console.log('file exists');
+      console.log( core.setOutput("time", 'exists'));
   }
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
