@@ -1,13 +1,13 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-#   who-to-greet:  # id of input
-#     description: 'Who to greet'
-#     required: true
-#     default: 'World'
-# outputs:
-#   time: # id of output
-#     description: 'The time we greeted you'
+  package:  # id of input
+    description: 'Sting version of JSON file'
+    required: true
+    default: '{}'
+outputs:
+  version: # id of output
+    description: 'version number from the package'
 runs:
   using: 'node12'
   main: 'action.js'
