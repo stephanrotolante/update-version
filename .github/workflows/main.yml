@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Testing Action
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
@@ -11,11 +11,11 @@ jobs:
 
       - name: runs ls
         run: ls
-    #   - name: Hello world action step
-    #     uses: ./ # Uses an action in the root directory
-    #     id: hello
-    #     with:
-    #       package: 
+      - name: Hello world action step
+        uses: ./ # Uses an action in the root directory
+        id: hello
+        with:
+          package: cat package.json
     #   # Use the output from the `hello` step
     #   - name: Get the output time
     #     run: echo "The time was ${{ steps.hello.outputs.time }}"
